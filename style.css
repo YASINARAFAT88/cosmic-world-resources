@@ -9,6 +9,30 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
+.highlight {
+    color: #fc56b1;
+}
+
+.primary-btn {
+    outline: 0;
+    border: 0;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, #ff008e, #e1057e);
+    box-shadow: 0 7px 0 #ac206d;
+    position: relative;
+    top: 0;
+}
+
+.primary-btn:active {
+    top: 5px;
+    box-shadow: 0 2px 0 #ac206d;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -16,7 +40,6 @@ body {
 }
 
 header {
-    height: 100vh;
     background-image: url('./images/cloud.png');
     background-size: cover;
     background-color: rgba(0, 0, 0, .5);
@@ -48,4 +71,44 @@ nav {
     border-radius: 7px;
 }
 
-/* Header section End  */
+/* Navber section End  */
+
+.banner {
+    height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+}
+
+.banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: flex-start;
+}
+
+.banner h1 {
+    font-size: 45px;
+
+    color: white;
+}
+
+.banner p {
+    color: white;
+    line-height: 1.5;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.banner-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.banner-right img {
+    width: 100%;
+}
+
+/* Banner section Complate */
