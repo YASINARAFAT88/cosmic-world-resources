@@ -74,6 +74,8 @@ nav {
 /* Navber section End  */
 
 .banner {
+    height: calc(100vh - 80px);
+    min-height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -203,4 +205,85 @@ nav {
     font-family: inherit;
     outline: 0;
     border: 1px solid #ff008e;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+/* Navbar */
+#nav-toggler {
+    display: none;
+}
+
+.nav-toggler-icon {
+    display: none;
+    color: white;
+    font-size: 30px;
+}
+
+/* Responsive css  */
+
+@media (max-width: 950px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-left h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .banner {
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .gallery,
+    .feature,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        text-align: center;
+    }
+
+    .photo img {
+        max-width: 350px;
+    }
+
+    .banner-left {
+        order: 2;
+    }
+
+    .primary-btn {
+        margin-bottom: 20px;
+    }
+
+    .nav-toggler-icon {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-end;
+        transform: translateY(-355px);
+        transition: .5s linear;
+    }
+
+    #nav-toggler:checked~.navigation {
+        transform: translateY(0px);
+    }
 }
